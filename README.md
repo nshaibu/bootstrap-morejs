@@ -3,7 +3,10 @@ This is a simple Js library to truncate html texts
 ## Requirements
 jQuery and Bootstrap
 ## Usage
-```<script src="more.js" type="text/javascript"></script>```
+```
+<link href="more.css" type="text/css">
+<script src="more.js" type="text/javascript"></script>
+```
 
 To truncate a text
 
