@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="more.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <dl>
+                <dt>Truncate a long text</dt>
+                <dd class="mb-2">
+                    <p class="more-text" data-maxsize="23">
+                        This statement is long and it will be truncate and a tooltip will be display when you hover on it
+                    </p>
+                </dd>
+
+                <dt>Hover on the truncated text for tooltip</dt>
+                <dd class="mb-2">
+                    <p class="more-text" data-maxsize="23" data-toggle="tooltip">
+                        This statement is long and it will be truncate and a tooltip will be display when you hover on it
+                    </p>
+                </dd>
+
+                <dt>Hover on the truncated text for popover</dt>
+                <dd class="mb-2">
+                    <p class="more-text" data-maxsize="23" data-toggle="popover">
+                        This statement is long and it will be truncate and a popover will be display when you hover on it
+                    </p>
+                </dd>
+
+                <dt>Howeew</dt>
+                <dd class="mb-2">
+                    <p class="more-text" data-maxsize="23" data-toggle="collapse">
+                        This statement is long and it will be truncate and a popover will be display when you hover on it
+                    </p>
+                </dd>
+
+            </dl>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="more.js"></script>
+    </body>
+</html>
