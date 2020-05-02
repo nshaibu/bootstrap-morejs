@@ -18,7 +18,7 @@
 
         if (more_set !== 'true') {
             if (text.length > maxsize)
-                $(this).html(`${visible_str}<span class="dots">...</span><div style="display:none;">${hidden_str}</div>`);
+                $(this).html(`${visible_str}<span class="dots">...</span><div class="more" style="display:none;">${hidden_str}</div>`);
 
             $(this).attr('data-more', true);
 
@@ -43,6 +43,8 @@
 
                     let moreTextCaret = `<span class="more-dots ml-2" style="cursor:pointer">${topCaret}</span>`;
 
+                    content.css("word-wrap", "break-word");
+
                     truncatedTextCaret.html(bottomCaret);
                     truncatedTextCaret.addClass('ml-2');
                     truncatedTextCaret.css("cursor", "pointer");
@@ -50,11 +52,22 @@
                     moreText.append(moreTextCaret);
 
                     truncatedTextCaret.click(function(event) {
-                        console.log($(this))
+                        let bottomCaretBtn = $(this);
+                        let container = bottomCaretBtn.parent().get(0);
+                        let moreText = $(container).find('.more');
+
+                        moreText.css('display', 'inline');
+                        bottomCaretBtn.css('display', 'none');
                     });
 
-                    moreTextCaret.click(function(event) {
-                        
+                    moreText.find('.more-dots').click(function(event) {
+                        let topCaretBtn = $(this);
+                        let moreText = topCaretBtn.parent().get(0);
+                        let container = $(moreText).parent().get(0);
+                        let bottomCaretBtn = $(container).find('.dots');
+
+                        $(moreText).css("display", "none");
+                        bottomCaretBtn.css("display", "inline");
                     });
                     break;
             }
