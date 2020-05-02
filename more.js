@@ -40,7 +40,6 @@
                     let content = $(this);
                     let truncatedTextCaret = content.find('.dots');
                     let moreText = content.find('.more');
-
                     let moreTextCaret = `<span class="more-dots ml-2" style="cursor:pointer">${topCaret}</span>`;
 
                     content.css("word-wrap", "break-word");
