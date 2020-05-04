@@ -1,21 +1,27 @@
 # bootstrap-morejs
 This is a simple Js library to truncate html texts
 ## Requirements
-jQuery and Bootstrap
+jQuery, Popper and Bootstrap
 ## Usage
 ```
-<link href="more.css" type="text/css">
 <script src="more.js" type="text/javascript"></script>
 ```
 
-To truncate a text
+Truncate a long text
 
 ```<div class="more-text" data-maxsize="20">The text to be truncate</div>```
 
-To truncate a text and display the full text in a tooltip when cursor hover on the truncated text
 
-```<div class="more-text" data-maxsize="20" data-toggle="tooltip">The text to be truncate</div>```
+Truncate text and show more in a tooltip when cursor hover on the truncated text
 
-To truncate a text but show all the text when user click the truncated text or ellipsis(...) following the text
+```<div class="more-text" data-maxsize="20" data-toggle="tooltip">The text to be truncated</div>```
+
+
+Truncate a text and show more in a popover when cursor hover on truncated text
+
+```<div class="more-text" data-maxsize="23" data-toggle="popover">The text to be truncated</div>```
+
+
+Truncate a text and show more when caret btn is clicked
 
 ```<div class="moret-text" data-maxsize="20" data-toggle="collapse">The text to be truncate/div>```
