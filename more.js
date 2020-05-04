@@ -7,7 +7,7 @@
         let more_set = $(this).attr('data-more');
         let data_toggle = $(this).attr('data-toggle');
         let maxsize = parseInt($(this).attr('data-maxsize'));
-        let placement = $(this).attr('data-placement')
+        let placement = $(this).attr('data-placement');
 
         placement = placement ? placement: "auto";
         maxsize = maxsize ? maxsize : 30;
