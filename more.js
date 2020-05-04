@@ -3,13 +3,13 @@
     let bottomCaret = `<img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjQgMTEuMzA1bC03Ljk5NyAxMS4zOUw4IDExLjMwNXoiLz48L3N2Zz4='/>`;
     let topCaret = `<img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNOCAyMC42OTVsNy45OTctMTEuMzlMMjQgMjAuNjk1eiIvPjwvc3ZnPg=='/>`;
 
-    function toggle(content, caret) {}
-
     $('.more-text').each(function () {
         let more_set = $(this).attr('data-more');
         let data_toggle = $(this).attr('data-toggle');
         let maxsize = parseInt($(this).attr('data-maxsize'));
+        let placement = $(this).attr('data-placement')
 
+        placement = placement ? placement: "auto";
         maxsize = maxsize ? maxsize : 30;
 
         let text = $(this).text().trim();
@@ -26,13 +26,16 @@
             switch (data_toggle) {
                 case 'tooltip':
                     $(this).attr('title', text.trim());
-                    $(this).tooltip({container: 'body', placement: 'auto'});
+                    $(this).tooltip({
+                        container: 'body',
+                        placement: placement
+                    });
                     break;
                 case 'popover':
                     $(this).popover({
                         container: 'body',
                         trigger: 'hover focus',
-                        placement: 'auto',
+                        placement: placement,
                         content: text.trim(),
                     });
                     break;
