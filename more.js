@@ -29,11 +29,11 @@
                     $(this).tooltip({container: 'body', placement: 'auto'});
                     break;
                 case 'popover':
-                    $(this).attr('title', text.trim());
                     $(this).popover({
                         container: 'body',
                         trigger: 'hover focus',
-                        placement: 'auto'
+                        placement: 'auto',
+                        content: text.trim(),
                     });
                     break;
                 case 'collapse':
